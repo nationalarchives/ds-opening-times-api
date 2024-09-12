@@ -10,7 +10,7 @@ services:
       - CONFIG=config.Develop
       - SECRET_KEY=abc123
     ports:
-      - 83:8080
+      - 65531:8080
     volumes:
       - ./:/app
   dev:
@@ -23,4 +23,4 @@ services:
     volumes:
       - .:/docs
     ports:
-      - 1083:8000
+      - 65530:8000
