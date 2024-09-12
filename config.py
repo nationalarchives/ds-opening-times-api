@@ -19,6 +19,9 @@ class Base(object):
 
     FORCE_HTTPS: bool = strtobool(os.getenv("FORCE_HTTPS", "True"))
 
+    GOOGLE_MAPS_API_KEY: str = os.getenv("GOOGLE_MAPS_API_KEY", "")
+    GOOGLE_MAPS_PLACE_ID: str = os.getenv("GOOGLE_MAPS_PLACE_ID", "")
+
 
 class Production(Base, Features):
     pass

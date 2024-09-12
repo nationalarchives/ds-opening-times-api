@@ -5,16 +5,21 @@ services:
       args:
         IMAGE: ghcr.io/nationalarchives/tna-python
         IMAGE_TAG: preview
+    env_file: .env
     environment:
       - ENVIRONMENT=develop
       - CONFIG=config.Develop
       - SECRET_KEY=abc123
+      - GOOGLE_MAPS_PLACE_ID=ChIJYe6r5ngOdkgRf6SVcbMsQ0k
     ports:
       - 65531:8080
     volumes:
       - ./:/app
   dev:
     image: ghcr.io/nationalarchives/tna-python-dev:preview
+    env_file: .env
+    environment:
+      - GOOGLE_MAPS_PLACE_ID=ChIJYe6r5ngOdkgRf6SVcbMsQ0k
     volumes:
       - ./:/app
 
