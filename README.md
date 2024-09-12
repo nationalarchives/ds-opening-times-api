@@ -1,4 +1,4 @@
-# TNA Python FastAPI Application
+# DS Opening Times API
 
 ## Quickstart
 
@@ -9,7 +9,7 @@ docker compose up -d
 
 ### Docs
 
-http://localhost:83/docs
+http://localhost:65531/docs
 
 ### Run tests
 
